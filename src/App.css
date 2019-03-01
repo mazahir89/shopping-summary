@@ -11,3 +11,7 @@
 .purchase-card > .show-grid {
   padding-bottom: 1.5em;
 }
+
+.item-details-button:focus {
+  outline: none;
+}
