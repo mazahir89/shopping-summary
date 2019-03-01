@@ -11,7 +11,10 @@ var styles = {
   }
 };
 
-export default class PickupSavings extends Component {
+interface PickupSavingsModel {
+  price: number;
+}
+export default class PickupSavings extends Component<PickupSavingsModel> {
   render() {
     const tooltip = (
       <Tooltip id="tooltip">

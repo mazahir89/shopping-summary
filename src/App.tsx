@@ -8,16 +8,20 @@ import EstimatedTotal from "./components/EstimatedTotal/EstimatedTotal";
 import ItemDetails from "./components/ItemDetails/ItemDetails";
 import "./App.css";
 
+interface AppStateModel {
+  total: number;
+  pickupSavings: number;
+  taxes: number;
+  estimatedTotal: number;
+}
+
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: 100,
-      pickupSavings: -3.85,
-      taxes: 0,
-      estimatedTotal: 0
-    };
-  }
+  state = {
+    total: 100,
+    pickupSavings: -3.85,
+    taxes: 0,
+    estimatedTotal: 0
+  };
   render() {
     return (
       <div className="container">

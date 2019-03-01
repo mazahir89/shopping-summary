@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
 
-export default class TaxesFees extends Component {
+interface TaxesFeesModel {
+  taxes: string;
+}
+
+export default class TaxesFees extends Component<TaxesFeesModel> {
   render() {
     return (
       <Row className="show-grid">

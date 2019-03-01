@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
 
-export default class EstimatedTotal extends Component {
+interface EstimatedTotalModel {
+  price: string;
+}
+
+export default class EstimatedTotal extends Component<EstimatedTotalModel> {
   render() {
     return (
       <Row>

@@ -1,21 +1,18 @@
 import React, { Component } from "react";
-import { Button, Collapse, Well, Media, Row, Col } from "react-bootstrap";
+import { Button, Collapse, Media } from "react-bootstrap";
 
-export default class ItemDetails extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: false
-    };
-  }
+interface ItemDetailsStateModel {
+  open: boolean;
+}
+
+export default class ItemDetails extends Component<any, ItemDetailsStateModel> {
+  state = {
+    open: false
+  };
   render() {
     return (
       <div>
-        <Button
-          className="item-details-button"
-          bsStyle="Link"
-          onClick={() => this.setState({ open: !this.state.open })}
-        >
+        <Button onClick={() => this.setState({ open: !this.state.open })}>
           {this.state.open === false ? `See` : `Hide `} item details
           {this.state.open === false ? ` +` : ` -`}
         </Button>
